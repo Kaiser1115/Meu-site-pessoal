@@ -1,0 +1,103 @@
+
+img {
+    transition: transform 0.3s; /* Transição suave para transformação */
+}
+
+img:hover {
+    transform: scale(1.05); /* Aumenta a imagem levemente ao passar o mouse */
+}
+
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo do corpo */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f0f0f0; /* Cor de fundo suave */
+    color: #333; /* Cor do texto */
+    
+    
+}
+
+/* Estilo do cabeçalho */
+header {
+    background: rgba(0, 0, 0, 0.7); /* Fundo escuro com transparência */
+    color: white;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+}
+
+/* Estilo do título */
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+/* Estilo da navegação */
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ffcc00; /* Cor de destaque ao passar o mouse */
+}
+
+/* Estilo das abas */
+.tab-content {
+    display: none; /* Esconde as abas por padrão */
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 800px; /* Largura máxima para as abas */
+}
+
+/* Estilo do rodapé */
+footer {
+    text-align: center;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Estilo para a aba ativa */
+.tablink.active {
+    color: #ffcc00; /* Cor de destaque para a aba ativa */
+    border-bottom: 2px solid #ffcc00; /* Linha embaixo da aba ativa */
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    nav ul li {
+        display: block; /* Coloca os links em coluna em telas pequenas */
+        margin: 10px 0;
+    }
+
+    h1 {
+        font-size: 2em; /* Reduz o tamanho do título em telas pequenas */
+    }
+}

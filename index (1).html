@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu site</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Meu site</h1>
+        <nav>
+            <ul>
+                <li><a href="#sobre" class="tablink" onclick="openTab(event, 'sobre')">Sobre Mim</a></li>
+                <li><a href="#animes" class="tablink" onclick="openTab(event, 'animes')">Animes</a></li>
+                <li><a href="#mangas" class="tablink" onclick="openTab(event, 'mangas')">Mangás</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="tabs">
+        <div class="tab-content" id="sobre">
+            <h2>Sobre Mim</h2>
+            <p>Olá! Meu nome é Alexandre tenho 17 anos nasci 06 de março de 2008 Itapira/SP. Eu amo muito animes e mangás, sempre amei a cultuta japonesa desde pequeno. Neste site, compartilho minhas recomendações e pensamentos sobre as melhores obras desse universo incrível. Espero que vocês encontre algo que goste!</p>
+            <a href="https://github.com/Kaiser1115" target="_blank">Meus projetos</a>
+        </div>
+
+        <div class="tab-content" id="animes" style="display:none;">
+            <h2>Animes Recomendados</h2>
+            <ul>
+                <li><strong>Dragon Ball</strong> - A série segue as aventuras do protagonista, Son Goku, desde sua infância até a idade adulta enquanto ele treina artes marciais e explora o mundo em busca de sete esferas conhecidas como as Esferas do Dragão, que convocam um dragão que concede um desejo quando reunidas.</li>
+                <img src="img/goku.jpg" alt="Dragon Ball" width="300" height="200">
+                <li><strong>My Hero Academia</strong> - A jornada de jovens heróis em um mundo que virou normal ter superpoderes.</li>
+                <img src="img/deku.jpg" alt="My Hero Academia" width="300" height="200">
+                <li><strong>Solo Leveling</strong> - Solo Leveling é uma história sobre um mundo onde humanos com habilidades mágicas lutam contra monstros para proteger a humanidade. A trama acompanha o guerreiro Jin-woo, que se torna um "player" com a chance de chegar ao poder ilimitado</li>
+                <img src="img/sung.jpg" alt="Solo Leveling" width="300" height="200">
+                <li><strong>One Piece</strong> - A aventura de piratas em busca do tesouro mais valioso do mundo. </li>
+                <img src="img/luffy.jpg" alt="One Piece" width="300" height="200">
+            </ul>
+        </div>
+
+        <div class="tab-content" id="mangas" style="display:none;">
+            <h2>Mangás Recomendados</h2>
+            <ul>
+                <li><strong>Gachiakuta</strong> -  Rudo, um jovem que vive em um gueto e é injustamente acusado de um crime.</li>
+                <img src="img/guto.jpg" alt="Gachiakuta" width="300" height="200">
+                <li><strong>Death Note</strong> - O mangá que deu origem ao famoso anime, explorando a mente de um jovem gênio.Um thriller psicológico sobre um caderno que pode matar pessoas.</li>
+                <img src="img/kira.jpg" alt="Death Note" width="300" height="200">
+                <li><strong>20th century boys</strong> - É um mangá que conta a história de um grupo de amigos que inventam um plano para dominar o mundo. O plano é executado por um dos amigos, e o protagonista Kenji descobre o que está acontecendo.</li>
+                <img src="img/century .jpg" alt="20th century boys" width="300" height="200">
+                <li><strong>Jujutsu Kaisen</strong> - Jujutsu Kaisen é uma série que conta a história de um adolescente que se envolve com um talismã amaldiçoado e ganha poderes sobrenaturais. </li>
+                <img src="img/jujutsu.jpg" alt="Jujutsu Kaisen" width="300" height="200">
+            </ul>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Anime e Mangá Mania. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        function openTab(evt, tabName) {
+            // Esconde todas as abas
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";  
+            }
+
+            // Remove a classe "active" de todos os links
+            tablinks = document.getElementsByClassName("tablink");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+
+            // Mostra a aba atual e adiciona a classe "active" ao link que abriu a aba
+            document.getElementById(tabName).style.display = "block";  
+            evt.currentTarget.className += " active";
+        }
+    </script>
+</body>
+</html>
